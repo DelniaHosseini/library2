@@ -147,4 +147,12 @@ if (isset($_POST["input_book"])) {
         header("location:../View/update_book.php?id=$id&error=$str");
     }
 
+}else if($_POST['delete_book']){
+    $id = $_POST['delete_book'];
+
+    $sql = "UPDATE `book2` SET active = 0 WHERE id = $id ";
+    
+    $result = mysqli_query($conn, $sql); 
+
+    header("location:../View/table.php");
 }
