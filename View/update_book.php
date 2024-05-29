@@ -18,7 +18,6 @@ if (isset($_GET['error'])) {
 ?>
 <html lang="en">
 
-
 <head>
     <link href="../dist/css/bootstrap.css" rel="stylesheet">
 

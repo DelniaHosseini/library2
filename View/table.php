@@ -43,7 +43,7 @@ $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
                         <td><?php echo $row['description'] ?></td>
                 
                         <td>
-                            <div class="d-flex justify-content-around">
+                            <div class="">
                                 <form action="../Controller/BookController.php" method="POST">
                                     <button value="<?php echo $row['id']; ?>" name="delete_book" class="btn btn-danger">Delete</button>
                                 </form>

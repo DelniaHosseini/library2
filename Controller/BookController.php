@@ -7,7 +7,7 @@ if (isset($_POST["input_book"])) {
     $title = trim($_POST["title"]);
     $author = trim($_POST["author"]);
     $description = trim($_POST["description"]);
-    $inputs = [$title => 'title', $author => 'author', $description => 'description'];
+    $inputs = ['title' => $title, 'author' =>$author , 'description' =>$description ];
     $errors = [];
 
     $title_result = preg_match("/^[a-zA-Z0-9\s]+$/", $title);
@@ -149,10 +149,7 @@ if (isset($_POST["input_book"])) {
 
 }else if($_POST['delete_book']){
     $id = $_POST['delete_book'];
-
     $sql = "UPDATE `book2` SET active = 0 WHERE id = $id ";
-    
     $result = mysqli_query($conn, $sql); 
-
     header("location:../View/table.php");
 }
